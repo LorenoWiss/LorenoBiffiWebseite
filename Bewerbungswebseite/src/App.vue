@@ -1,47 +1,49 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div id="app">
+    <Header />
+    <main>
+      <Einleitung />
+      <ÜberMich />
+      <Fähigkeiten />
+      <Kontakt />
+    </main>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script>
+import Header from '@/components/Header.vue'
+import Einleitung from '@/components/Einleitung.vue'
+import ÜberMich from '@/components/ÜberMich.vue'
+import Fähigkeiten from '@/components/Fähigkeiten.vue'
+import Kontakt from '@/components/Kontakt.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Einleitung,
+    ÜberMich,
+    Fähigkeiten,
+    Kontakt
+  }
+}
+</script>
+
+<style>
+/* Globale Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+main {
+  flex: 1;
+  padding: 20px;
 }
 </style>
