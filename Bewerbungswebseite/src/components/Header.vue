@@ -1,11 +1,11 @@
 <template>
   <header class="header">
     <nav class="nav">
-      <router-link to="/" class="logo">Loreno Biffi</router-link>
+      <a href="#start" class="logo">Loreno Biffi</a>
       <div class="nav-links">
-        <router-link to="/about">Über Mich</router-link>
-        <router-link to="/skills">Fähigkeiten</router-link>
-        <router-link to="/contact">Kontakt</router-link>
+        <a href="#ueber-mich">Über Mich</a>
+        <a href="#faehigkeiten">Fähigkeiten</a>
+        <a href="#kontakt">Kontakt</a>
       </div>
     </nav>
   </header>
@@ -19,9 +19,10 @@ export default {
 
 <style scoped>
 .header {
-  background-color: #2c3e50;
+  min-height: 10px;
+  background: linear-gradient(170deg, #465102, #5f731c 30%);
   padding: 1rem;
-}
+  }
 
 .nav {
   display: flex;
@@ -29,6 +30,7 @@ export default {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  
 }
 
 .logo {

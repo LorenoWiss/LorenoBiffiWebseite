@@ -7,7 +7,7 @@
       </h2>
       <p class="intro-text">Ich bin auf der Suche nach einem Praktikum, um meine Lehre abzuschliessen.
       </p>
-      <router-link to="/about" class="cta-button">Mehr über mich</router-link>
+       <a href="#ueber-mich" class="cta-button">Mehr über mich</a>
     </div>
   </section>
 </template>
@@ -23,8 +23,9 @@ export default {
   min-height: 80vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(50deg,#e22d02, #fea002 30%);
   padding: 2rem;
+  border-radius: 25px;
 }
 
 .intro-content {

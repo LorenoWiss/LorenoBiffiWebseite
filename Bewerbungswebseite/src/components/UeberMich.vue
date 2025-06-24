@@ -2,10 +2,10 @@
   <section class="about-section">
     <h2>Über Mich</h2>
     <div class="about-content">
-      <img src="@/assets/profile.jpg" alt="Profilbild" class="profile-image">
+      <img src="@/assets/profile.png" alt="Profilbild" class="profile-image">
       <div class="about-text">
-        <p>Hallo! Ich bin [Dein Name], ein leidenschaftlicher [Dein Beruf].</p>
-        <p>Mit [X] Jahren Erfahrung in [Bereich] liebe ich es, [was du machst].</p>
+        <p>Hallo!</p>
+        <p>Ich bin 17 Jahre alt und bin im Vierten Semester bei der WISS in Zürich</p>
       </div>
     </div>
   </section>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'AboutMe'
+  name: 'UeberMich',
 }
 </script>
 

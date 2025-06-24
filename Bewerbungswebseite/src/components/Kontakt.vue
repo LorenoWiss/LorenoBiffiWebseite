@@ -1,21 +1,7 @@
 <template>
   <section class="contact-section">
     <h2>Kontakt</h2>
-    <form class="contact-form" @submit.prevent="submitForm">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" v-model="form.name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" v-model="form.email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Nachricht:</label>
-        <textarea id="message" v-model="form.message" required></textarea>
-      </div>
-      <button type="submit">Senden</button>
-    </form>
+    <p>Email: Loreno.f.Biffi@gmail.com</p>
   </section>
 </template>
 

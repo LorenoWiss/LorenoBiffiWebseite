@@ -2,10 +2,10 @@
   <div id="app">
     <Header />
     <main>
-      <Einleitung />
-      <ÜberMich />
-      <Fähigkeiten />
-      <Kontakt />
+      <Einleitung id="start" />
+      <UeberMich id="ueber-mich" />
+      <Faehigkeiten id="faehigkeiten" />
+      <Kontakt id="kontakt" />
     </main>
   </div>
 </template>
@@ -13,8 +13,8 @@
 <script>
 import Header from '@/components/Header.vue'
 import Einleitung from '@/components/Einleitung.vue'
-import ÜberMich from '@/components/ÜberMich.vue'
-import Fähigkeiten from '@/components/Fähigkeiten.vue'
+import UeberMich from '@/components/UeberMich.vue'
+import Faehigkeiten from '@/components/Faehigkeiten.vue'
 import Kontakt from '@/components/Kontakt.vue'
 
 export default {
@@ -22,8 +22,8 @@ export default {
   components: {
     Header,
     Einleitung,
-    ÜberMich,
-    Fähigkeiten,
+    UeberMich,
+    Faehigkeiten,
     Kontakt
   }
 }
@@ -34,6 +34,7 @@ export default {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  
 }
 
 #app {
@@ -46,4 +47,6 @@ main {
   flex: 1;
   padding: 20px;
 }
+
+
 </style>

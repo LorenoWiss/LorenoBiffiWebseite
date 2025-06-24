@@ -1,6 +1,7 @@
 <template>
   <section class="skills-section">
     <h2>Meine Fähigkeiten</h2>
+     <h2>TEST - Sichtbarkeit prüfen</h2> <!-- Temporärer Test -->
     <div class="skills-grid">
       <div v-for="(skill, index) in skills" :key="index" class="skill-item">
         <div class="skill-icon">
@@ -30,11 +31,15 @@ export default {
 </script>
 
 <style scoped>
+
 .skills-section {
-  padding: 2rem;
-  max-width: 1200px;
+  padding: 4rem 2rem; /* Mehr Platz */
   margin: 0 auto;
+  position: relative; /* Für korrekte Positionierung */
+  z-index: 1; /* Über anderen Elementen */
 }
+
+
 
 .skills-grid {
   display: grid;
