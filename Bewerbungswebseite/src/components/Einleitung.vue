@@ -23,7 +23,7 @@ export default {
   min-height: 80vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(50deg,#e22d02, #fea002 30%);
+  background: linear-gradient(50deg,#DA6A00, #EE9B01 30%);
   padding: 2rem;
   border-radius: 25px;
 }

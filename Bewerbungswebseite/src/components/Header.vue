@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .header {
   min-height: 10px;
-  background: linear-gradient(170deg, #465102, #5f731c 30%);
+  background: linear-gradient(170deg, #14471E, #68904D 30%);
   padding: 1rem;
   }
 
