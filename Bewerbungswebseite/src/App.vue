@@ -20,6 +20,7 @@ import Kontakt from '@/components/Kontakt.vue'
 export default {
   name: 'App',
   components: {
+    // eslint-disable-next-line vue/no-reserved-component-names
     Header,
     Einleitung,
     UeberMich,
@@ -34,7 +35,7 @@ export default {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  
+
 }
 
 #app {

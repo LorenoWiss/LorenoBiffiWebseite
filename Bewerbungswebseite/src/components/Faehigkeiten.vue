@@ -1,7 +1,6 @@
 <template>
   <section class="skills-section">
     <h2>Meine Fähigkeiten</h2>
-     <h2>TEST - Sichtbarkeit prüfen</h2> <!-- Temporärer Test -->
     <div class="skills-grid">
       <div v-for="(skill, index) in skills" :key="index" class="skill-item">
         <div class="skill-icon">
@@ -21,9 +20,9 @@ export default {
   data() {
     return {
       skills: [
-        { name: 'Webentwicklung', icon: '🖥️', description: 'HTML, CSS, JavaScript, Vue' },
-        { name: 'Design', icon: '🎨', description: 'UI/UX, Figma, Adobe XD' },
-        { name: 'Backend', icon: '⚙️', description: 'Node.js, Express, Datenbanken' }
+        { name: 'Frontend-Entwicklung', icon: '', description: 'Vue und React' },
+        { name: 'UI/UX Design', icon: '', description: 'Figma' },
+        { name: 'Backend-Entwicklung', icon: '', description: 'Spring Boot' }
       ]
     }
   }
@@ -33,7 +32,7 @@ export default {
 <style scoped>
 
 .skills-section {
-  padding: 4rem 2rem; /* Mehr Platz */
+  padding: 4rem 5%; /* Mehr Platz */
   margin: 0 auto;
   position: relative; /* Für korrekte Positionierung */
   z-index: 1; /* Über anderen Elementen */

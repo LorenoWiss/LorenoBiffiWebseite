@@ -14,23 +14,24 @@
 
 <script>
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Introduction'
 }
 </script>
 
 <style scoped>
 .intro-section {
-  min-height: 80vh;
+  min-height: 30vh;
   display: flex;
-  align-items: center;
+  align-items: center auto;
   background: linear-gradient(50deg,#DA6A00, #EE9B01 30%);
   padding: 2rem;
   border-radius: 25px;
 }
 
 .intro-content {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 90%;
+padding-left: 3%;
 }
 
 h1 {

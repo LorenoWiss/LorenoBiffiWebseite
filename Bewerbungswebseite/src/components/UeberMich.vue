@@ -19,9 +19,9 @@ export default {
 
 <style scoped>
 .about-section {
-  padding: 2rem;
+  padding-left: 5%;
   max-width: 1200px;
-  margin: 0 auto;
+
 }
 
 .about-content {

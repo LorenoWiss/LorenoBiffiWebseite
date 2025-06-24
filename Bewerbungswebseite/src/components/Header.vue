@@ -1,7 +1,11 @@
 <template>
   <header class="header">
     <nav class="nav">
+      <div class="logo-container">
+        <!-- Profilbild -->
+      <img src="@/assets/logo.png" alt="Profilbild" class="profile-image">
       <a href="#start" class="logo">Loreno Biffi</a>
+      </div>
       <div class="nav-links">
         <a href="#ueber-mich">Über Mich</a>
         <a href="#faehigkeiten">Fähigkeiten</a>
@@ -26,11 +30,19 @@ export default {
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  
+  max-width: auto;
+  margin:  auto;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
 }
 
 .logo {
@@ -44,9 +56,17 @@ export default {
   color: white;
   margin-left: 1rem;
   text-decoration: none;
+  justify-content: margin-left 20rem;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 </style>
