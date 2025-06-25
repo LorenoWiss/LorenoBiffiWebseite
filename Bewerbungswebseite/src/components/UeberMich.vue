@@ -1,11 +1,63 @@
 <template>
   <section class="about-section">
-    <h2>Über Mich</h2>
-    <div class="about-content">
-      <img src="@/assets/profile.png" alt="Profilbild" class="profile-image">
-      <div class="about-text">
-        <p>Hallo!</p>
-        <p>Ich bin 17 Jahre alt und bin im Vierten Semester bei der WISS in Zürich</p>
+    <div class="about-container">
+      <!-- Profil Header mit Bild -->
+      <div class="profile-header">
+        <div class="profile-image-container">
+          <img 
+            src="@/assets/profile.png" 
+            alt="Loreno Biffi" 
+            class="profile-image"
+            loading="lazy"
+          >
+          <div class="image-border"></div>
+        </div>
+        <h1>Loreno Biffi</h1>
+        <p class="subtitle">Applikationsentwickler in Ausbildung</p>
+      </div>
+
+      <!-- Hauptinhalt -->
+      <div class="about-content">
+        <!-- Persönliche Einführung -->
+        <section class="ich-card">
+          <h2><span class="icon">👋</span> Hallo!</h2>
+          <p>
+            Ich bin 17 Jahre alt und befinde mich im vierten Semester meiner Ausbildung 
+            zum Informatiker mit Fachrichtung Applikationsentwicklung bei der WISS in Zürich.
+          </p>
+          <p>
+            Meine Leidenschaft für Technologie begann schon früh und hat sich zu einem 
+            tiefgreifenden Interesse an Softwareentwicklung und modernen Webtechnologien entwickelt.
+          </p>
+        </section>
+
+        <!-- Ausbildungsweg -->
+        <section class="timeline-card">
+          <h2><span class="icon">📚</span> Mein Ausbildungsweg</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2021 - Heute</div>
+              <div class="timeline-content">
+                <h3>Informatiker EFZ Applikationsentwicklung</h3>
+                <p>WISS Schulen für Wirtschaft Informatik Immobilien, Zürich</p>
+                <ul>
+                  <li>Schwerpunkt auf Web- und Mobile-Entwicklung</li>
+                  <li>Praktische Erfahrung in agilen Projekten</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>     
+
+        <!-- Praktikumssuche -->
+        <section class="cta-card">
+          <h2><span class="icon">🔍</span> Praktikumssuche</h2>
+          <p>
+            Ich suche aktuell nach einem spannenden Praktikum, um meine Ausbildung 
+            abzuschließen und praktische Erfahrung in einem professionellen Umfeld zu sammeln.
+          </p>
+          <router-link to="/#kontakt" class="cta-button">Kontakt aufnehmen</router-link>
+        </section>
       </div>
     </div>
   </section>
@@ -14,33 +66,160 @@
 <script>
 export default {
   name: 'UeberMich',
+  metaInfo() {
+    return {
+      title: 'Über Mich - Loreno Biffi'
+    }
+  }
 }
 </script>
 
 <style scoped>
 .about-section {
-  padding-left: 5%;
+  padding: 2rem 5%;
   max-width: 1200px;
-
+  margin: 0 auto;
+  color: #333;
 }
 
-.about-content {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  margin-top: 1rem;
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.profile-image-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1.5rem;
+  position: relative;
 }
 
 .profile-image {
-  width: 200px;
-  height: 200px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 4px solid white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
+.image-border {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: -5%;
+  left: -5%;
+  background: linear-gradient(45deg, #68904D, #14471E);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #14471E;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #68904D;
+  font-weight: 500;
+}
+
+
+section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #14471E;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1.3rem;
+}
+
+.ich-card, .timeline-card, .cta-card {
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #68904D;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: #68904D;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+
+
+.cta-card {
+  background: linear-gradient(135deg, rgba(104, 144, 77, 0.1), rgba(20, 71, 30, 0.1));
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #68904D;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #14471E;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
   .about-content {
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .cta-card {
+    grid-column: span 2;
+  }
+  
+  .profile-image-container {
+    width: 180px;
+    height: 180px;
   }
 }
 </style>
