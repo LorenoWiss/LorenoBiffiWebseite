@@ -28,10 +28,21 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 main {
   flex: 1;
   padding: 20px;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
 </style>

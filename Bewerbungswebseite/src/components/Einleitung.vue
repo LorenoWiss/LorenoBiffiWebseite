@@ -4,9 +4,10 @@
       <div class="intro-content">
         <h1>Mein Name ist <span class="highlight">Loreno Biffi</span></h1>
         <h2>Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickeler bei der WISS in Zürich.</h2>
-        <p class="intro-text">Ich bin auf der Suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
+        <p class="intro-text">...Und suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
         <router-link to="/ueber-mich" class="cta-button">Mehr über mich</router-link>
       </div>
+      <img src="@/assets/profile.png" alt="Profilbild" class="profile-image">
     </section>
     
     <Faehigkeiten id="faehigkeiten" />
@@ -31,15 +32,17 @@ export default {
 .intro-section {
   min-height: 30vh;
   display: flex;
-  align-items: center auto;
+  align-items: center;
   background: linear-gradient(50deg,#DA6A00, #EE9B01 30%);
   padding: 2rem;
   border-radius: 25px;
+  position: relative;
 }
 
 .intro-content {
   max-width: 90%;
   padding-left: 3%;
+  z-index: 1;
 }
 
 h1 {
@@ -78,9 +81,45 @@ h2 {
   background-color: #1a252f;
 }
 
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: 5%;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(2, 69, 2, 0.771);
+}
+
+/* Mobile Version - Bild ausblenden */
 @media (max-width: 768px) {
+  .profile-image {
+    display: none;
+  }
+  
+  .intro-content {
+    max-width: 100%;
+    padding: 0 5%;
+    text-align: center;
+  }
+  
   h1 {
     font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  .intro-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .cta-button {
+    margin: 0 auto;
   }
 }
 </style>
