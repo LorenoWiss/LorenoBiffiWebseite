@@ -4,16 +4,19 @@
     <main>
       <router-view />
     </main>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -35,6 +38,8 @@ body {
 main {
   flex: 1;
   padding: 20px;
+  min-height: calc(100vh - 120px); /* 120px = Header + Footer Höhe */
+  padding-bottom: 2rem; /* Abstand zum Footer */
 }
 
 html, body {
