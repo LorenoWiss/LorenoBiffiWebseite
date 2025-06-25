@@ -2,14 +2,13 @@
   <header class="header">
     <nav class="nav">
       <div class="logo-container">
-        <!-- Profilbild -->
-      <img src="@/assets/logo.png" alt="Profilbild" class="profile-image">
-      <a href="#start" class="logo">Loreno Biffi</a>
+        <img src="@/assets/logo.png" alt="Profilbild" class="profile-image">
+        <router-link to="/" class="logo">Loreno Biffi</router-link>
       </div>
       <div class="nav-links">
-        <a href="#ueber-mich">Über Mich</a>
-        <a href="#faehigkeiten">Fähigkeiten</a>
-        <a href="#kontakt">Kontakt</a>
+        <router-link to="/ueber-mich">Über Mich</router-link>
+        <router-link to="/#faehigkeiten">Fähigkeiten</router-link>
+        <router-link to="/#kontakt">Kontakt</router-link>
       </div>
     </nav>
   </header>
@@ -26,17 +25,16 @@ export default {
   min-height: 10px;
   background: linear-gradient(170deg, #14471E, #68904D 30%);
   padding: 1rem;
-  }
+}
 
 .nav {
   display: flex;
   align-items: center;
   max-width: auto;
-  margin:  auto;
+  margin: auto;
   justify-content: space-between;
   padding-left: 2%;
   padding-right: 2%;
-
 }
 
 .logo-container {
@@ -52,14 +50,13 @@ export default {
   font-size: 1.2rem;
 }
 
-.nav-links a {
+.nav-links a, .nav-links router-link {
   color: white;
   margin-left: 1rem;
   text-decoration: none;
-  justify-content: margin-left 20rem;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links router-link:hover {
   text-decoration: underline;
 }
 

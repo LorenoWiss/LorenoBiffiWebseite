@@ -1,21 +1,29 @@
 <template>
-  <section class="intro-section">
-    <div class="intro-content">
-      <h1>Herzlich Willkommen auf meiner Webseite, mein Name ist <span class="highlight">Loreno Biffi</span>
-      </h1>
-      <h2>Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickeler bei der WISS in Zürich.
-      </h2>
-      <p class="intro-text">Ich bin auf der Suche nach einem Praktikum, um meine Lehre abzuschliessen.
-      </p>
-       <a href="#ueber-mich" class="cta-button">Mehr über mich</a>
-    </div>
-  </section>
+  <div>
+    <section class="intro-section">
+      <div class="intro-content">
+        <h1>Mein Name ist <span class="highlight">Loreno Biffi</span></h1>
+        <h2>Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickeler bei der WISS in Zürich.</h2>
+        <p class="intro-text">Ich bin auf der Suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
+        <router-link to="/ueber-mich" class="cta-button">Mehr über mich</router-link>
+      </div>
+    </section>
+    
+    <Faehigkeiten id="faehigkeiten" />
+    <Kontakt id="kontakt" />
+  </div>
 </template>
 
 <script>
+import Faehigkeiten from '@/components/Faehigkeiten.vue'
+import Kontakt from '@/components/Kontakt.vue'
+
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Introduction'
+  name: 'Introduction',
+  components: {
+    Faehigkeiten,
+    Kontakt
+  }
 }
 </script>
 
@@ -31,7 +39,7 @@ export default {
 
 .intro-content {
   max-width: 90%;
-padding-left: 3%;
+  padding-left: 3%;
 }
 
 h1 {
@@ -40,14 +48,14 @@ h1 {
 }
 
 .highlight {
-  color: #2c3e50;
+  color: #14471E;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 2rem;
-  color: #555;
+  color: #14471E;
 }
 
 .intro-text {
@@ -59,8 +67,8 @@ h2 {
 .cta-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #2c3e50;
-  color: white;
+  background-color: #68904D;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s;
