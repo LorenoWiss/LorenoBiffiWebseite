@@ -1,13 +1,26 @@
 <template>
   <section class="contact-section">
     <h2>Kontakt</h2>
-    <p>Email: Loreno.f.Biffi@gmail.com</p>
+    <p>Loreno.f.Biffi@gmail.com</p>
+    <p>Zürich, Schweiz</p>
+    <a href="https://github.com/LorenoWiss" target="_blank" class="github-link">
+      <font-awesome-icon :icon="['fab', 'github']" /> GitHub
+    </a>
   </section>
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faGithub)
+
 export default {
   name: 'ContactForm',
+  components: {
+    FontAwesomeIcon
+  },
   data() {
     return {
       form: {
@@ -19,10 +32,9 @@ export default {
   },
   methods: {
     submitForm() {
-      // Hier würde die Formularverarbeitung stattfinden
-      console.log('Formular gesendet:', this.form);
-      alert('Vielen Dank für deine Nachricht!');
-      this.form = { name: '', email: '', message: '' };
+      console.log('Formular gesendet:', this.form)
+      alert('Vielen Dank für deine Nachricht!')
+      this.form = { name: '', email: '', message: '' }
     }
   }
 }
@@ -33,6 +45,7 @@ export default {
   padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .contact-form {
@@ -71,4 +84,23 @@ button:hover {
 }
 
 
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.github-link:hover {
+  color: #000;
+}
 </style>    
