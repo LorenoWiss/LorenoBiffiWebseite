@@ -22,7 +22,7 @@
         <section class="ich-card">
           <h2><span class="icon">👋</span> Hallo!</h2>
           <p>
-            Ich bin 17 Jahre alt und befinde mich im vierten Semester meiner Ausbildung 
+            Ich bin 17 Jahre alt und befinde mich in meiner Ausbildung 
             zum Informatiker mit Fachrichtung Applikationsentwicklung bei der WISS in Zürich.
           </p>
           <p>
@@ -36,14 +36,28 @@
           <h2><span class="icon">📚</span> Mein Ausbildungsweg</h2>
           <div class="timeline">
             <div class="timeline-item">
-              <div class="timeline-date">2021 - Heute</div>
+              <div class="timeline-date">Aug. 2023 – laufend</div>
               <div class="timeline-content">
                 <h3>Informatiker EFZ Applikationsentwicklung</h3>
-                <p>WISS Schulen für Wirtschaft Informatik Immobilien, Zürich</p>
+                <p>WISS, Hohlstrasse 535, 8048 Zürich</p>
                 <ul>
                   <li>Schwerpunkt auf Web- und Mobile-Entwicklung</li>
                   <li>Praktische Erfahrung in agilen Projekten</li>
                 </ul>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Aug. 2020 - Juni 2023</div>
+              <div class="timeline-content">
+                <h3>Sekundarstufe A</h3>
+                <p>Albisriderplatz, Norastrasse 20, 8004 Zürich</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">Aug. 2014 - Juni 2020</div>
+              <div class="timeline-content">
+                <h3>Primarstufe</h3>
+                <p>Kappeli, Badenerstrasse 618, 8048 Zürich</p>
               </div>
             </div>
           </div>
