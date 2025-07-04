@@ -3,13 +3,9 @@
     <div class="about-container">
       <!-- Profil Header mit Bild -->
       <div class="profile-header">
+        <router-link to="/" class="back-button">← Zurück zur Startseite</router-link>
         <div class="profile-image-container">
-          <img 
-            src="@/assets/profile.png" 
-            alt="Loreno Biffi" 
-            class="profile-image"
-            loading="lazy"
-          >
+          <img src="@/assets/profile.png" alt="Loreno Biffi" class="profile-image" loading="lazy" />
           <div class="image-border"></div>
         </div>
         <h1>Loreno Biffi</h1>
@@ -22,11 +18,11 @@
         <section class="ich-card">
           <h2><span class="icon">👋</span> Hallo!</h2>
           <p>
-            Ich bin 17 Jahre alt und befinde mich in meiner Ausbildung 
-            zum Informatiker mit Fachrichtung Applikationsentwicklung bei der WISS in Zürich.
+            Ich bin 17 Jahre alt und befinde mich in meiner Ausbildung zum Informatiker mit
+            Fachrichtung Applikationsentwicklung bei der WISS in Zürich.
           </p>
           <p>
-            Meine Leidenschaft für Technologie begann schon früh und hat sich zu einem 
+            Meine Leidenschaft für Technologie begann schon früh und hat sich zu einem
             tiefgreifenden Interesse an Softwareentwicklung und modernen Webtechnologien entwickelt.
           </p>
         </section>
@@ -61,14 +57,14 @@
               </div>
             </div>
           </div>
-        </section>     
+        </section>
 
         <!-- Praktikumssuche -->
         <section class="cta-card">
           <h2><span class="icon">🔍</span> Praktikumssuche</h2>
           <p>
-            Ich suche aktuell nach einem spannenden Praktikum, um meine Ausbildung 
-            abzuschließen und praktische Erfahrung in einem professionellen Umfeld zu sammeln.
+            Ich suche aktuell nach einem spannenden Praktikum, um meine Ausbildung abzuschließen und
+            praktische Erfahrung in einem professionellen Umfeld zu sammeln.
           </p>
           <router-link to="/#kontakt" class="cta-button">Kontakt aufnehmen</router-link>
         </section>
@@ -82,9 +78,9 @@ export default {
   name: 'UeberMich',
   metaInfo() {
     return {
-      title: 'Über Mich - Loreno Biffi'
+      title: 'Über Mich - Loreno Biffi',
     }
-  }
+  },
 }
 </script>
 
@@ -102,6 +98,22 @@ export default {
   position: relative;
 }
 
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #68904d;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding-left: 0%;
+  padding-right: 80%;
+}
+
+.back-button:hover {
+  color: #14471e;
+}
+
 .profile-image-container {
   width: 150px;
   height: 150px;
@@ -117,7 +129,7 @@ export default {
   position: relative;
   z-index: 2;
   border: 4px solid white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .image-border {
@@ -126,35 +138,34 @@ export default {
   height: 110%;
   top: -5%;
   left: -5%;
-  background: linear-gradient(45deg, #68904D, #14471E);
+  background: linear-gradient(45deg, #68904d, #14471e);
   border-radius: 50%;
   z-index: 1;
 }
 
 h1 {
   font-size: 2.5rem;
-  color: #14471E;
+  color: #14471e;
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #68904D;
+  color: #68904d;
   font-weight: 500;
 }
-
 
 section {
   background: white;
   border-radius: 12px;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #14471E;
+  color: #14471e;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -164,7 +175,9 @@ h2 {
   font-size: 1.3rem;
 }
 
-.ich-card, .timeline-card, .cta-card {
+.ich-card,
+.timeline-card,
+.cta-card {
   margin-bottom: 2rem;
 }
 
@@ -180,7 +193,7 @@ h2 {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #68904D;
+  background: #68904d;
 }
 
 .timeline-item {
@@ -190,7 +203,7 @@ h2 {
 
 .timeline-date {
   font-weight: 600;
-  color: #68904D;
+  color: #68904d;
   margin-bottom: 0.5rem;
 }
 
@@ -198,8 +211,6 @@ h2 {
   margin-bottom: 0.5rem;
   color: #333;
 }
-
-
 
 .cta-card {
   background: linear-gradient(135deg, rgba(104, 144, 77, 0.1), rgba(20, 71, 30, 0.1));
@@ -210,7 +221,7 @@ h2 {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #68904D;
+  background-color: #68904d;
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -218,7 +229,7 @@ h2 {
 }
 
 .cta-button:hover {
-  background-color: #14471E;
+  background-color: #14471e;
   transform: translateY(-2px);
 }
 
@@ -226,11 +237,11 @@ h2 {
   .about-content {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .cta-card {
     grid-column: span 2;
   }
-  
+
   .profile-image-container {
     width: 180px;
     height: 180px;

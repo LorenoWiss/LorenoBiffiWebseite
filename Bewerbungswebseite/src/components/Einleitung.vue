@@ -7,7 +7,7 @@
           Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickeler bei der WISS in
           Zürich.
         </h2>
-        <p class="intro-text">...Und suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
+        <p class="intro-text">Und suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
         <router-link to="/ueber-mich" class="cta-button">Mehr über mich</router-link>
       </div>
       <img src="@/assets/profile.png" alt="Profilbild" class="profile-image" />

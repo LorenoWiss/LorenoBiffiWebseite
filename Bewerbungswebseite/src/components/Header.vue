@@ -1,28 +1,29 @@
 <template>
   <header class="header">
-    <div class="logo-container" :class="{ 'hidden': menuOpen }">
-      <img src="@/assets/logo.png" alt="Profilbild" class="profile-image">
+    <div class="logo-container" :class="{ hidden: menuOpen }">
+      <img src="@/assets/logo.png" alt="Profilbild" class="profile-image" />
       <router-link to="/" class="logo">Loreno Biffi</router-link>
     </div>
-    
+
     <button class="menu-toggle" @click="toggleMenu" aria-label="Menü öffnen">
       <span class="hamburger"></span>
     </button>
-    
-    <nav class="nav" :class="{ 'active': menuOpen }">
+
+    <nav class="nav" :class="{ active: menuOpen }">
       <div class="nav-header">
-        <img src="@/assets/logo.png" alt="Profilbild" class="drawer-logo">
+        <img src="@/assets/logo.png" alt="Profilbild" class="drawer-logo" />
         <span class="drawer-title">Loreno Biffi</span>
       </div>
       <div class="nav-links">
-        <router-link v-if="$route.path !== '/ueber-mich'" to="/ueber-mich" class="nav-link" @click="closeMenu">Über Mich</router-link>
-        <router-link v-else to="/" class="nav-link" @click="closeMenu">Startseite</router-link>
-        <a href="/#faehigkeiten" class="nav-link" @click="closeMenu">Fähigkeiten</a>
+        <router-link to="/ueber-mich" class="nav-link" @click="closeMenu">Über Mich</router-link>
+        <router-link to="/web-projekte" class="nav-link" @click="closeMenu"
+          >Web-Projekte</router-link
+        >
         <a href="/#kontakt" class="nav-link" @click="closeMenu">Kontakt</a>
       </div>
     </nav>
-    
-    <div class="menu-overlay" :class="{ 'active': menuOpen }" @click="closeMenu"></div>
+
+    <div class="menu-overlay" :class="{ active: menuOpen }" @click="closeMenu"></div>
   </header>
 </template>
 
@@ -31,25 +32,25 @@ export default {
   name: 'GlassHeader',
   data() {
     return {
-      menuOpen: false
+      menuOpen: false,
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.closeMenu);
+    window.addEventListener('scroll', this.closeMenu)
   },
   beforeUnmount() {
-    window.removeEventListener('scroll', this.closeMenu);
+    window.removeEventListener('scroll', this.closeMenu)
   },
   methods: {
     toggleMenu() {
-      this.menuOpen = !this.menuOpen;
-      document.body.classList.toggle('no-scroll', this.menuOpen);
+      this.menuOpen = !this.menuOpen
+      document.body.classList.toggle('no-scroll', this.menuOpen)
     },
     closeMenu() {
-      this.menuOpen = false;
-      document.body.classList.remove('no-scroll');
-    }
-  }
+      this.menuOpen = false
+      document.body.classList.remove('no-scroll')
+    },
+  },
 }
 </script>
 
@@ -153,13 +154,13 @@ export default {
   width: 45%; /* Deutlich schmaler */
   max-width: 200px; /* Maximale Breite begrenzt */
   height: 100vh;
-  background: linear-gradient(160deg, #14471E, #68904D 40%);
+  background: linear-gradient(160deg, #14471e, #68904d 40%);
   display: flex;
   flex-direction: column;
   padding: 1rem;
   transition: right 0.3s ease-out;
   z-index: 1001;
-  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav-header {
@@ -167,7 +168,7 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 1rem;
 }
 
@@ -204,7 +205,7 @@ export default {
 }
 
 .nav-link:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Overlay */
@@ -232,7 +233,7 @@ export default {
   .menu-overlay {
     display: none;
   }
-  
+
   .nav {
     position: static;
     width: auto;
@@ -243,20 +244,20 @@ export default {
     max-width: none;
     box-shadow: none;
   }
-  
+
   .nav-header {
     display: none;
   }
-  
+
   .nav-links {
     flex-direction: row;
     gap: 1rem;
   }
-  
+
   .nav-link {
     padding: 0.5rem 1rem;
   }
-  
+
   .logo-container.hidden {
     opacity: 1;
   }

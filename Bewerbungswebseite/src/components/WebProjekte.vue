@@ -2,7 +2,7 @@
   <section class="projekt-section">
     <div class="projekt-container">
       <router-link to="/" class="back-button">← Zurück zur Startseite</router-link>
-      <h1 class="page-title">{{ pageTitle }}</h1>
+      <h1 class="page-title">Web-Projekte</h1>
       <p class="info-text">
         Die Projekte auf dieser Seite sind aktuell noch in Arbeit. Bitte schauen Sie später wieder
         vorbei!
