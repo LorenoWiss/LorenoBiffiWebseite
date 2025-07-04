@@ -16,8 +16,8 @@ export default {
   name: 'App',
   components: {
     Header,
-    Footer
-  }
+    Footer,
+  },
 }
 </script>
 
@@ -42,12 +42,11 @@ main {
   padding-bottom: 2rem; /* Abstand zum Footer */
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
 }
-
-
 </style>

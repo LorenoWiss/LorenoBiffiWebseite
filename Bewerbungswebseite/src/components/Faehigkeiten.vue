@@ -8,6 +8,13 @@
         </div>
         <h3>{{ skill.name }}</h3>
         <p>{{ skill.description }}</p>
+
+        <p class="skill-linkText">
+          <router-link v-if="skill.route" :to="skill.route">
+            {{ skill.linkText }}
+          </router-link>
+          <span v-else>{{ skill.linkText }}</span>
+        </p>
       </div>
     </div>
   </section>
@@ -21,35 +28,51 @@ export default {
       skills: [
         {
           name: 'Web-Entwicklung',
-          icon: ['fas', 'globe'], // faGlobe
+          icon: ['fas', 'globe'],
           description: 'Erfahrung mit React, Vue.js und Spring Boot',
+          linkText: 'Projekte ansehen →',
+          route: '/Web-projekte',
         },
         {
           name: 'Programmierung',
-          icon: ['fas', 'laptop-code'], // faLaptopCode
+          icon: ['fas', 'laptop-code'],
           description: 'Java (Objektorientiert und Funktional), HTML, CSS, JavaScript',
+          linkText: 'Projekte ansehen →',
+          route: '/Web-projekte',
+          meta: { scrollToTop: true },
         },
         {
           name: 'UI/UX Design',
-          icon: ['fas', 'paint-brush'], // faPaintBrush
+          icon: ['fas', 'paint-brush'],
           description:
             'Erfahrung mit Prototypen in Figma und Grundlagen von UI/UX Design Prinzipien',
+          linkText: 'Projekte ansehen →',
+          route: '/Web-projekte',
+          meta: { scrollToTop: true },
         },
         {
           name: 'Datenbanken',
-          icon: ['fas', 'database'], // faDatabase
+          icon: ['fas', 'database'],
           description: 'Erfahrung mit MySQL und MongoDB',
+          linkText: 'Projekte ansehen →',
+          route: '/Web-projekte',
+          meta: { scrollToTop: true },
         },
         {
           name: '3D-Design',
-          icon: ['fas', 'object-group'], // faObjectGroup
+          icon: ['fas', 'object-group'],
           description: '3D-Gestaltung in Blender',
+          linkText: '3D Projekte ansehen →',
+          route: '/3d-projekte',
+          meta: { scrollToTop: true },
         },
         {
           name: 'Sprachen',
-          icon: ['fas', 'language'], // faLanguage
-          description:
-            'Deutsch (Muttersprache), Englisch (Cambridge-Exam Vorbereitung), Italienisch (Zweitsprache), Französisch (Sek A Kenntnisse)',
+          icon: ['fas', 'language'],
+          description: 'Deutsch, Englisch, Italienisch und Französisch',
+          linkText: 'Cambrige Exam Zertifikat →',
+          route: '/sprachen',
+          meta: { scrollToTop: true },
         },
       ],
     }
@@ -83,6 +106,20 @@ export default {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.skill-linkText a {
+  color: rgba(104, 144, 77, 0.9);
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    color 0.3s ease,
+    text-decoration 0.3s ease;
+}
+
+.skill-linkText a:hover {
+  color: rgba(104, 144, 77, 1);
+  text-decoration: underline;
 }
 
 .skill-item {

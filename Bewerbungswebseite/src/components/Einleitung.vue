@@ -3,13 +3,16 @@
     <section class="intro-section">
       <div class="intro-content">
         <h1>Mein Name ist <span class="highlight">Loreno Biffi</span></h1>
-        <h2>Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickeler bei der WISS in Zürich.</h2>
+        <h2>
+          Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickeler bei der WISS in
+          Zürich.
+        </h2>
         <p class="intro-text">...Und suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
         <router-link to="/ueber-mich" class="cta-button">Mehr über mich</router-link>
       </div>
-      <img src="@/assets/profile.png" alt="Profilbild" class="profile-image">
+      <img src="@/assets/profile.png" alt="Profilbild" class="profile-image" />
     </section>
-    
+
     <Faehigkeiten id="faehigkeiten" />
     <Kontakt id="kontakt" />
   </div>
@@ -23,8 +26,8 @@ export default {
   name: 'Introduction',
   components: {
     Faehigkeiten,
-    Kontakt
-  }
+    Kontakt,
+  },
 }
 </script>
 
@@ -33,7 +36,7 @@ export default {
   min-height: 30vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(50deg,#DA6A00, #EE9B01 30%);
+  background: linear-gradient(50deg, #da6a00, #ee9b01 30%);
   padding: 2rem;
   border-radius: 25px;
   position: relative;
@@ -51,14 +54,14 @@ h1 {
 }
 
 .highlight {
-  color: #14471E;
+  color: #14471e;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 2rem;
-  color: #14471E;
+  color: #14471e;
 }
 
 .intro-text {
@@ -70,7 +73,7 @@ h2 {
 .cta-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #68904D;
+  background-color: #68904d;
   color: rgb(255, 255, 255);
   text-decoration: none;
   border-radius: 4px;
@@ -97,27 +100,27 @@ h2 {
   .profile-image {
     display: none;
   }
-  
+
   .intro-content {
     max-width: 100%;
     padding: 0 5%;
     text-align: center;
   }
-  
+
   h1 {
     font-size: 2rem;
   }
-  
+
   h2 {
     font-size: 1.2rem;
   }
-  
+
   .intro-section {
     flex-direction: column;
     padding: 2rem 1rem;
     text-align: center;
   }
-  
+
   .cta-button {
     margin: 0 auto;
   }
