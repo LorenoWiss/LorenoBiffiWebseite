@@ -99,7 +99,7 @@ export default {
 }
 
 .back-button {
-  display: inline-block;
+  display: inline-block; !important
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
   text-decoration: none;
