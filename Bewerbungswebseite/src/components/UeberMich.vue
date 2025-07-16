@@ -96,6 +96,9 @@ export default {
   text-align: center;
   margin-bottom: 3rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .back-button {
