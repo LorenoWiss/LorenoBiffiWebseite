@@ -102,14 +102,15 @@ export default {
 }
 
 .back-button {
-  display: inline-block;
-  margin: 1.5rem 0;
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
   text-decoration: none;
   color: #68904d;
   font-weight: 500;
   transition: color 0.3s;
   padding: 0.5rem 1rem;
-  white-space: nowrap; /* verhindert Zeilenumbruch */
+  white-space: nowrap; 
 }
 
 .back-button:hover {
