@@ -17,7 +17,8 @@
         style="max-width: 100%; border-radius: 8px">
         Ihr Browser unterstützt das Video-Tag nicht.
       </video>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>

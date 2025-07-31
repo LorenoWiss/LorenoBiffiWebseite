@@ -17,7 +17,7 @@ const routes = [
     meta: { title: 'Über Mich' },
   },
   {
-    path: '/Web-projekte',
+    path: '/web-projekte',
     component: WebProjekte,
     meta: { title: 'Web Projekte', scrollToTop: true },
   },

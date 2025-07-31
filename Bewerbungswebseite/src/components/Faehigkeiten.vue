@@ -31,14 +31,14 @@ export default {
           icon: ['fas', 'globe'],
           description: 'Erfahrung mit React, Vue.js und Spring Boot',
           linkText: 'Projekte ansehen →',
-          route: '/Web-projekte',
+                  route: '/web-projekte',
         },
         {
           name: 'Programmierung',
           icon: ['fas', 'laptop-code'],
           description: 'Java (Objektorientiert und Funktional), HTML, CSS, JavaScript',
           linkText: 'Projekte ansehen →',
-          route: '/Web-projekte',
+                  route: '/web-projekte',
           meta: { scrollToTop: true },
         },
         {
@@ -47,7 +47,7 @@ export default {
           description:
             'Erfahrung mit Prototypen in Figma und Grundlagen von UI/UX Design Prinzipien',
           linkText: 'Projekte ansehen →',
-          route: '/Web-projekte',
+                  route: '/web-projekte',
           meta: { scrollToTop: true },
         },
         {
@@ -55,7 +55,7 @@ export default {
           icon: ['fas', 'database'],
           description: 'Erfahrung mit MySQL und MongoDB',
           linkText: 'Projekte ansehen →',
-          route: '/Web-projekte',
+                  route: '/web-projekte',
           meta: { scrollToTop: true },
         },
         {
