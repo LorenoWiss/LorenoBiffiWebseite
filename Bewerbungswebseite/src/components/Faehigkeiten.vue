@@ -2,20 +2,16 @@
   <section class="skills-section">
     <h2>Meine Fähigkeiten</h2>
     <div class="skills-grid">
-      <div v-for="(skill, index) in skills" :key="index" class="skill-item">
-        <div class="skill-icon">
-          <font-awesome-icon :icon="skill.icon" />
+      <router-link v-for="(skill, index) in skills" :key="index" :to="skill.route" class="skill-item-link">
+        <div class="skill-item">
+          <div class="skill-icon">
+            <font-awesome-icon :icon="skill.icon" />
+          </div>
+          <h3>{{ skill.name }}</h3>
+          <p>{{ skill.description }}</p>
+          <p class="skill-linkText">{{ skill.linkText }}</p>
         </div>
-        <h3>{{ skill.name }}</h3>
-        <p>{{ skill.description }}</p>
-
-        <p class="skill-linkText">
-          <router-link v-if="skill.route" :to="skill.route">
-            {{ skill.linkText }}
-          </router-link>
-          <span v-else>{{ skill.linkText }}</span>
-        </p>
-      </div>
+      </router-link>
     </div>
   </section>
 </template>
@@ -108,21 +104,26 @@ export default {
   }
 }
 
-.skill-linkText a {
-  color: rgba(104, 144, 77, 0.9);
+.skill-item-link {
   text-decoration: none;
-  font-weight: 500;
-  transition:
-    color 0.3s ease,
-    text-decoration 0.3s ease;
+  color: inherit;
+  display: flex;
 }
 
-.skill-linkText a:hover {
+
+.skill-linkText {
+  margin-top: auto;
+  color: rgba(104, 144, 77, 0.9);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-linkText {
   color: rgba(104, 144, 77, 1);
-  text-decoration: underline;
 }
 
 .skill-item {
+  cursor: pointer;
   background: azure;
   padding: 1.8rem 1.5rem;
   border-radius: 12px;
@@ -135,6 +136,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  flex-grow: 1;
 }
 
 .skill-item:hover {
