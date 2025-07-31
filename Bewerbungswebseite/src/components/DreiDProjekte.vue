@@ -7,11 +7,23 @@
         Die 3D-Projekte auf dieser Seite sind aktuell noch in Arbeit. Bitte schauen Sie später
         wieder vorbei!
       </p>
-    </div>
-  </section>
+      <video
+        autoplay
+        loop
+        muted
+        playsinline
+        :src="videoSource"
+        class="video-player"
+        style="max-width: 100%; border-radius: 8px">
+        Ihr Browser unterstützt das Video-Tag nicht.
+      </video>
+  </div>
 </template>
 
 <script>
+import videoSource from '@/assets/ShaderTest.mp4'
+
+
 export default {
   name: '3DProjekte',
   props: {
@@ -25,7 +37,17 @@ export default {
       title: this.pageTitle + ' - Loreno Biffi',
     }
   },
+
+  data() {
+    return {
+      videoSource: videoSource
+    }
+  }
+
 }
+
+
+
 </script>
 
 <style scoped>
@@ -60,5 +82,10 @@ export default {
   color: #555;
   text-align: center;
   line-height: 1.6;
+}
+
+.video-player {
+  display: block;
+  margin: 20px auto;
 }
 </style>
