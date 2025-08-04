@@ -5,7 +5,10 @@
       <h1 class="page-title">Web-Projekte</h1>
       <p class="info-text">
         Die Projekte auf dieser Seite sind aktuell noch in Arbeit. Bitte schauen Sie später wieder
-        vorbei!
+        vorbei! <br />
+        Die Seiten <router-link to="/sprachen">Sprachen</router-link> und
+        <router-link to="/3d-projekte">3D-Projekte</router-link> sind ein kleiner Einblick in meine
+        Fähigkeiten.
       </p>
     </div>
   </section>
@@ -60,5 +63,18 @@ export default {
   color: #555;
   text-align: center;
   line-height: 1.6;
+}
+
+.info-text a,
+.info-text .router-link {
+  color: #68904d;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.info-text a:hover,
+.info-text .router-link:hover {
+  color: #14471e;
 }
 </style>
