@@ -23,6 +23,7 @@ import Faehigkeiten from '@/components/Faehigkeiten.vue'
 import Kontakt from '@/components/Kontakt.vue'
 
 export default {
+  // eslint-disable-next-line vue/multi-word-component-names
   name: 'Introduction',
   components: {
     Faehigkeiten,

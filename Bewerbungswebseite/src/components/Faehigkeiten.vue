@@ -2,7 +2,12 @@
   <section class="skills-section">
     <h2>Meine Fähigkeiten</h2>
     <div class="skills-grid">
-      <router-link v-for="(skill, index) in skills" :key="index" :to="skill.route" class="skill-item-link">
+      <router-link
+        v-for="(skill, index) in skills"
+        :key="index"
+        :to="skill.route"
+        class="skill-item-link"
+      >
         <div class="skill-item">
           <div class="skill-icon">
             <font-awesome-icon :icon="skill.icon" />
@@ -27,14 +32,14 @@ export default {
           icon: ['fas', 'globe'],
           description: 'Erfahrung mit React, Vue.js und Spring Boot',
           linkText: 'Projekte ansehen →',
-                  route: '/web-projekte',
+          route: '/web-projekte',
         },
         {
           name: 'Programmierung',
           icon: ['fas', 'laptop-code'],
           description: 'Java (Objektorientiert und Funktional), HTML, CSS, JavaScript',
           linkText: 'Projekte ansehen →',
-                  route: '/web-projekte',
+          route: '/web-projekte',
           meta: { scrollToTop: true },
         },
         {
@@ -43,7 +48,7 @@ export default {
           description:
             'Erfahrung mit Prototypen in Figma und Grundlagen von UI/UX Design Prinzipien',
           linkText: 'Projekte ansehen →',
-                  route: '/web-projekte',
+          route: '/web-projekte',
           meta: { scrollToTop: true },
         },
         {
@@ -51,7 +56,7 @@ export default {
           icon: ['fas', 'database'],
           description: 'Erfahrung mit MySQL und MongoDB',
           linkText: 'Projekte ansehen →',
-                  route: '/web-projekte',
+          route: '/web-projekte',
           meta: { scrollToTop: true },
         },
         {
@@ -110,9 +115,7 @@ export default {
   display: flex;
 }
 
-
 .skill-linkText {
-  margin-top: auto;
   color: rgba(104, 144, 77, 0.9);
   font-weight: 500;
   transition: color 0.3s ease;
@@ -137,7 +140,6 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  flex-grow: 1;
 }
 
 .skill-item:hover {
