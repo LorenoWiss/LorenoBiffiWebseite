@@ -6,6 +6,10 @@
     <a href="https://github.com/LorenoWiss" target="_blank" class="github-link">
       <font-awesome-icon :icon="['fab', 'github']" /> GitHub
     </a>
+    <p>
+      Ich arbeite im Moment noch an einem Kontaktformular. Bitte kontaktieren Sie mich direkt per
+      E-Mail.
+    </p>
   </section>
 </template>
 
@@ -19,15 +23,15 @@ library.add(faGithub)
 export default {
   name: 'ContactForm',
   components: {
-    FontAwesomeIcon
+    FontAwesomeIcon,
   },
   data() {
     return {
       form: {
         name: '',
         email: '',
-        message: ''
-      }
+        message: '',
+      },
     }
   },
   methods: {
@@ -35,14 +39,15 @@ export default {
       console.log('Formular gesendet:', this.form)
       alert('Vielen Dank für deine Nachricht!')
       this.form = { name: '', email: '', message: '' }
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style scoped>
 .contact-section {
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -60,7 +65,8 @@ export default {
   flex-direction: column;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -83,13 +89,11 @@ button:hover {
   background-color: #1a252f;
 }
 
-
 .github-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
-
 
 .github-link {
   display: inline-flex;
@@ -103,4 +107,4 @@ button:hover {
 .github-link:hover {
   color: #000;
 }
-</style>    
+</style>

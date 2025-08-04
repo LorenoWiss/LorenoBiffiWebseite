@@ -4,10 +4,10 @@
       <div class="intro-content">
         <h1>Mein Name ist <span class="highlight">Loreno Biffi</span></h1>
         <h2>
-          Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickeler bei der WISS in
+          Ich bin gerade in Ausbildung zum Informatiker, als Applikationsentwickler bei der WISS in
           Zürich.
         </h2>
-        <p class="intro-text">Und suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
+        <p class="intro-text">Ich suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
         <router-link to="/ueber-mich" class="cta-button">Mehr über mich</router-link>
       </div>
       <img src="@/assets/profile.png" alt="Profilbild" class="profile-image" />

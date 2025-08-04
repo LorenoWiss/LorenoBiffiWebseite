@@ -5,7 +5,8 @@
       <h1 class="page-title">3D-Projekte</h1>
       <p class="info-text">
         Die 3D-Projekte auf dieser Seite sind aktuell noch in Arbeit. Bitte schauen Sie später
-        wieder vorbei!
+        wieder vorbei! <br />
+        Hier ist ein kleiner Einblick in meine Fähigkeiten im Bereich 3D-Design:
       </p>
       <video
         autoplay
@@ -14,7 +15,8 @@
         playsinline
         :src="videoSource"
         class="video-player"
-        style="max-width: 100%; border-radius: 8px">
+        style="max-width: 100%; border-radius: 8px"
+      >
         Ihr Browser unterstützt das Video-Tag nicht.
       </video>
     </div>
@@ -23,7 +25,6 @@
 
 <script>
 import videoSource from '@/assets/ShaderTest.mp4'
-
 
 export default {
   name: '3DProjekte',
@@ -41,14 +42,10 @@ export default {
 
   data() {
     return {
-      videoSource: videoSource
+      videoSource: videoSource,
     }
-  }
-
+  },
 }
-
-
-
 </script>
 
 <style scoped>

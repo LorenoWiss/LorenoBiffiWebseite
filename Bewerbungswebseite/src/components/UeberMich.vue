@@ -22,8 +22,12 @@
             Fachrichtung Applikationsentwicklung bei der WISS in Zürich.
           </p>
           <p>
-            Meine Leidenschaft für Technologie begann schon früh und hat sich zu einem
-            tiefgreifenden Interesse an Softwareentwicklung und modernen Webtechnologien entwickelt.
+            Meine Leidenschaft für Technologie begann schon früh und hat sich zu einem starken
+            Interesse an Softwareentwicklung und modernen Webtechnologien entwickelt.
+          </p>
+          <p>
+            Jetzt suche ich nach einem Praktikum, um meine Kenntnisse in der Praxis anzuwenden und
+            weiter zu vertiefen.
           </p>
         </section>
 
@@ -63,7 +67,7 @@
         <section class="cta-card">
           <h2><span class="icon">🔍</span> Praktikumssuche</h2>
           <p>
-            Ich suche aktuell nach einem spannenden Praktikum, um meine Ausbildung abzuschließen und
+            Ich suche aktuell nach einem passendem Praktikum, um meine Ausbildung abzuschließen und
             praktische Erfahrung in einem professionellen Umfeld zu sammeln.
           </p>
           <router-link to="/#kontakt" class="cta-button">Kontakt aufnehmen</router-link>
@@ -110,7 +114,7 @@ export default {
   font-weight: 500;
   transition: color 0.3s;
   padding: 0.5rem 1rem;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .back-button:hover {
@@ -182,6 +186,7 @@ h2 {
 .timeline-card,
 .cta-card {
   margin-bottom: 2rem;
+  background: linear-gradient(135deg, rgba(153, 241, 94, 0.1), rgba(0, 148, 30, 0.247));
 }
 
 .timeline {
@@ -216,7 +221,7 @@ h2 {
 }
 
 .cta-card {
-  background: linear-gradient(135deg, rgba(104, 144, 77, 0.1), rgba(20, 71, 30, 0.1));
+  background: linear-gradient(135deg, rgba(153, 241, 94, 0.1), rgba(0, 148, 30, 0.247));
   text-align: center;
 }
 

@@ -31,6 +31,11 @@ const routes = [
     component: Sprachen,
     meta: { title: 'Sprachen', scrollToTop: true },
   },
+  {
+    path: '/kontakt',
+    name: 'Kontakt',
+    component: () => import('../components/Kontakt.vue'),
+  },
 ]
 
 const router = createRouter({
