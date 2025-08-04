@@ -126,7 +126,7 @@
         <p>
           Die Grafik zeigt meine Ergebnisse des Cambridge English Tests. Ich habe den Test im Juli
           2025 absolviert und ich bin sehr zufrieden mit den Ergebnissen. <br />
-          Das Zertifikat können Sie auf Anfrage erhalten.
+          Das Zertifikat können Sie auf <router-link to="/kontakt">Anfrage</router-link> erhalten.
         </p>
       </div>
 
@@ -134,7 +134,7 @@
         <h3>Deutsch</h3>
         <p>
           Deutsch ist meine Muttersprache. Ich habe in Sprache und Kommunikation einen 5.5. Zeugnis
-          auf Anfrage.
+          auf <router-link to="/kontakt">Anfrage</router-link> erhalten.
         </p>
       </div>
       <div class="language-box">
@@ -431,6 +431,22 @@ export default {
   max-width: 650px;
   margin: 2rem auto 0 auto;
   text-align: left;
+}
+
+.language-box a,
+.language-box .router-link,
+.english-text a,
+.english-text .router-link {
+  color: #68904d;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.language-box a:hover,
+.language-box .router-link:hover,
+.english-text a:hover,
+.english-text .router-link:hover {
+  color: #14471e;
 }
 
 /* Mobile Styles */
