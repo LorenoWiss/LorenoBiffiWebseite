@@ -11,12 +11,16 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-
+import Lebenslauf from './components/Lebenslauf.vue'
 export default {
   name: 'App',
   components: {
+    // eslint-disable-next-line vue/no-reserved-component-names
     Header,
+    // eslint-disable-next-line vue/no-reserved-component-names
     Footer,
+    // eslint-disable-next-line vue/no-unused-components
+    Lebenslauf,
   },
 }
 </script>

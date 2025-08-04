@@ -36,6 +36,11 @@ const routes = [
     name: 'Kontakt',
     component: () => import('../components/Kontakt.vue'),
   },
+  {
+    path: '/lebenslauf',
+    name: 'Lebenslauf',
+    component: () => import('../components/Lebenslauf.vue'),
+  },
 ]
 
 const router = createRouter({

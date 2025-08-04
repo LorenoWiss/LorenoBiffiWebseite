@@ -10,7 +10,7 @@
         <p class="intro-text">Ich suche nach einem Praktikum, um meine Lehre abzuschliessen.</p>
         <router-link to="/ueber-mich" class="cta-button">Mehr über mich</router-link>
       </div>
-      <img src="@/assets/profile.png" alt="Profilbild" class="profile-image" />
+      <img src="@/assets/Bewerbungsfoto_green.png" alt="Profilbild" class="profile-image" />
     </section>
 
     <Faehigkeiten id="faehigkeiten" />

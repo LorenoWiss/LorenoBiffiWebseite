@@ -1,15 +1,12 @@
 <template>
-<footer class="footer">
-  <div class="footer-content">
-        <p>&copy; 2025 Loreno Biffi</p>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Loreno Biffi</p>
     </div>
-</footer>
-
+  </footer>
 </template>
 
-<script>
-
-</script>
+<script></script>
 
 <style scoped>
 .footer {

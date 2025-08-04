@@ -5,7 +5,12 @@
       <div class="profile-header">
         <router-link to="/" class="back-button">← Zurück zur Startseite</router-link>
         <div class="profile-image-container">
-          <img src="@/assets/profile.png" alt="Loreno Biffi" class="profile-image" loading="lazy" />
+          <img
+            src="@/assets/Bewerbungsfoto_orange.png"
+            alt="Loreno Biffi"
+            class="profile-image"
+            loading="lazy"
+          />
           <div class="image-border"></div>
         </div>
         <h1>Loreno Biffi</h1>
@@ -18,8 +23,8 @@
         <section class="ich-card">
           <h2><span class="icon">👋</span> Hallo!</h2>
           <p>
-            Ich bin 17 Jahre alt und befinde mich in meiner Ausbildung zum Informatiker mit
-            Fachrichtung Applikationsentwicklung bei der WISS in Zürich.
+            Ich bin 17 Jahre alt und habe die theoretische Ausbildung zum Informatiker mit
+            Fachrichtung Applikationsentwicklung bei der WISS in Zürich abgeschlossen.
           </p>
           <p>
             Meine Leidenschaft für Technologie begann schon früh und hat sich zu einem starken
@@ -27,7 +32,7 @@
           </p>
           <p>
             Jetzt suche ich nach einem Praktikum, um meine Kenntnisse in der Praxis anzuwenden und
-            weiter zu vertiefen.
+            weiter zu vertiefen und um meine Lehre abzuschließen.
           </p>
         </section>
 
@@ -71,6 +76,15 @@
             praktische Erfahrung in einem professionellen Umfeld zu sammeln.
           </p>
           <router-link to="/#kontakt" class="cta-button">Kontakt aufnehmen</router-link>
+        </section>
+      </div>
+      <div class="CV-box">
+        <section class="CV-card">
+          <h2 class="cv-title"><span class="icon">📋</span>Lebenslauf:</h2>
+          <router-link to="/lebenslauf" class="cv-link"
+            >Sie können meinen angepassten Lebenslauf hier ansehen</router-link
+          >
+          <p>Auf Anfrage können Sie gerne meinen vollständigen Lebenslauf erhalten.</p>
         </section>
       </div>
     </div>
@@ -183,10 +197,9 @@ h2 {
 }
 
 .ich-card,
-.timeline-card,
-.cta-card {
+.timeline-card {
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, rgba(153, 241, 94, 0.1), rgba(0, 148, 30, 0.247));
+  background: linear-gradient(170deg, rgba(20, 71, 30, 0.582), rgba(104, 144, 77, 0.685) 50%);
 }
 
 .timeline {
@@ -221,8 +234,9 @@ h2 {
 }
 
 .cta-card {
-  background: linear-gradient(135deg, rgba(153, 241, 94, 0.1), rgba(0, 148, 30, 0.247));
+  background-color: rgb(230, 230, 230);
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .cta-button {
@@ -253,6 +267,45 @@ h2 {
   .profile-image-container {
     width: 180px;
     height: 180px;
+  }
+
+  .cv-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #68904d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+
+  .CV-box {
+    margin-top: 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: none;
+  }
+
+  .cv-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #14471e;
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 40% 1rem;
+  }
+
+  .CV-card {
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .cv-link:hover {
+    background-color: #14471e;
+    transform: translateY(-2px);
   }
 }
 </style>
