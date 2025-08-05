@@ -157,7 +157,7 @@ export default {
   height: 110%;
   top: -5%;
   left: -5%;
-  background: linear-gradient(45deg, #68904d, #14471e);
+  background: linear-gradient(45deg, #5a7e42, #14471e);
   border-radius: 50%;
   z-index: 1;
 }
@@ -197,7 +197,7 @@ h2 {
 .ich-card,
 .timeline-card {
   margin-bottom: 2rem;
-  background: linear-gradient(170deg, rgb(66, 180, 89), rgba(159, 204, 129, 0.856) 50%);
+  background: linear-gradient(180deg, #70a74c, #257735 100%);
 }
 
 .timeline {
@@ -222,13 +222,13 @@ h2 {
 
 .timeline-date {
   font-weight: 600;
-  color: #68904d;
+  color: #6ab439;
   margin-bottom: 0.5rem;
 }
 
 .timeline-content h3 {
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #14471e;
 }
 
 .cta-card {
