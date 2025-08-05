@@ -8,7 +8,12 @@
       <div class="projects-grid">
         <div v-for="project in projects" :key="project.id" class="project-card">
           <div class="project-image">
-            <img v-if="project.image" :src="project.image" :alt="project.title" class="project-thumbnail">
+            <img
+              v-if="project.image"
+              :src="project.image"
+              :alt="project.title"
+              class="project-logo"
+            />
             <div v-else class="placeholder-image">
               <span class="placeholder-text">{{ project.title }}</span>
             </div>
@@ -48,7 +53,7 @@
 </template>
 
 <script>
-import portfolioThumbnail from '@/assets/portfolio_tn.jpg'
+import portfolioLogo from '@/assets/logo.svg'
 
 export default {
   name: 'WebProjekte',
@@ -70,7 +75,7 @@ export default {
           tags: ['Vue 3', 'Vite', 'CSS', 'JavaScript'],
           status: 'available',
           link: 'https://loreno.ch',
-          image: portfolioThumbnail
+          image: portfolioLogo,
         },
         {
           id: 2,
