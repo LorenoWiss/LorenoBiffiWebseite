@@ -10,7 +10,7 @@
       <div class="cambridge-svg-wrapper">
         <h3 class="english-title">Englisch</h3>
         <div class="info-row">
-          <div class="info-box">Result:<br />Pass at Grade C</div>
+          <div class="info-box">Result:<br />Pass at Grade A</div>
           <div class="info-box">Overall Score:<br />{{ overallScore }}</div>
           <div class="info-box">CEFR Level:<br />{{ cefrLevel }}</div>
         </div>

@@ -21,7 +21,7 @@
       <div class="about-content">
         <!-- Persönliche Einführung -->
         <section class="ich-card">
-          <h2><span class="icon">👋</span> Hallo!</h2>
+          <h2>Über mich</h2>
           <p>
             Ich bin 17 Jahre alt und habe die theoretische Ausbildung zum Informatiker mit
             Fachrichtung Applikationsentwicklung bei der WISS in Zürich abgeschlossen.
@@ -31,14 +31,14 @@
             Interesse an Softwareentwicklung und modernen Webtechnologien entwickelt.
           </p>
           <p>
-            Jetzt suche ich nach einem Praktikum, um meine Kenntnisse in der Praxis anzuwenden und
-            weiter zu vertiefen und um meine Lehre abzuschließen.
+            <strong>Aktuell suche ich ein Zwei jähriges Praktikum</strong>, um meine Kenntnisse in
+            der Praxis anzuwenden, weiter zu vertiefen und meine Lehre erfolgreich abzuschließen.
           </p>
         </section>
 
         <!-- Ausbildungsweg -->
         <section class="timeline-card">
-          <h2><span class="icon">📚</span> Mein Ausbildungsweg</h2>
+          <h2>Mein Ausbildungsweg</h2>
           <div class="timeline">
             <div class="timeline-item">
               <div class="timeline-date">Aug. 2023 – laufend</div>
@@ -70,22 +70,20 @@
 
         <!-- Praktikumssuche -->
         <section class="cta-card">
-          <h2><span class="icon">🔍</span> Praktikumssuche</h2>
+          <h2 class="cv-title">Praktikumssuche</h2>
           <p>
-            Ich suche aktuell nach einem passendem Praktikum, um meine Ausbildung abzuschließen und
+            Ich suche aktuell nach einem passenden Praktikum, um meine Ausbildung abzuschließen und
             praktische Erfahrung in einem professionellen Umfeld zu sammeln.
           </p>
           <router-link to="/#kontakt" class="cta-button">Kontakt aufnehmen</router-link>
         </section>
       </div>
       <div class="CV-box">
-        <section class="CV-card">
-          <h2 class="cv-title"><span class="icon">📋</span>Lebenslauf:</h2>
-          <router-link to="/lebenslauf" class="cv-link"
-            >Sie können meinen angepassten Lebenslauf hier ansehen</router-link
-          >
-          <p>Auf Anfrage können Sie gerne meinen vollständigen Lebenslauf erhalten.</p>
-        </section>
+        <h2 class="cv-title">Lebenslauf</h2>
+        <router-link to="/lebenslauf" class="cv-link"
+          >Sie können meinen angepassten Lebenslauf hier ansehen</router-link
+        >
+        <p>Auf Anfrage können Sie gerne meinen vollständigen Lebenslauf erhalten.</p>
       </div>
     </div>
   </section>
@@ -199,7 +197,7 @@ h2 {
 .ich-card,
 .timeline-card {
   margin-bottom: 2rem;
-  background: linear-gradient(170deg, rgba(20, 71, 30, 0.582), rgba(104, 144, 77, 0.685) 50%);
+  background: linear-gradient(170deg, rgb(66, 180, 89), rgba(159, 204, 129, 0.856) 50%);
 }
 
 .timeline {
@@ -255,6 +253,11 @@ h2 {
   transform: translateY(-2px);
 }
 
+.about-content {
+  display: grid;
+  gap: 2rem;
+}
+
 @media (min-width: 768px) {
   .about-content {
     grid-template-columns: 1fr 1fr;
@@ -283,10 +286,10 @@ h2 {
   .CV-box {
     margin-top: 2rem;
     text-align: center;
-    background: white;
-    border-radius: 12px;
+    border-radius: 40px;
     padding: 2rem;
-    box-shadow: none;
+    background: linear-gradient(170deg, #da6a00, #ee9b01 50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
 
   .cv-title {
@@ -296,11 +299,6 @@ h2 {
     display: flex;
     gap: 0.5rem;
     margin: 0 40% 1rem;
-  }
-
-  .CV-card {
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   }
 
   .cv-link:hover {
