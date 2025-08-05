@@ -94,6 +94,32 @@ h2 {
   margin-right: 5%;
   margin-top: 2rem;
   box-shadow: 0 4px 10px rgba(2, 69, 2, 0.771);
+  min-width: 180px;
+  min-height: 180px;
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .profile-image {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* Große Desktop Bildschirme */
+@media (min-width: 1600px) {
+  .profile-image {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Ultra-große Bildschirme */
+@media (min-width: 2400px) {
+  .profile-image {
+    width: 320px;
+    height: 320px;
+  }
 }
 
 /* Mobile Version - Bild ausblenden */

@@ -15,11 +15,11 @@
         <span class="drawer-title">Loreno Biffi</span>
       </div>
       <div class="nav-links">
-        <router-link to="/ueber-mich" class="nav-link" @click="closeMenu">Über Mich</router-link>
-        <router-link to="/web-projekte" class="nav-link" @click="closeMenu"
-          >Web-Projekte</router-link
-        >
-        <a href="/#kontakt" class="nav-link" @click="closeMenu">Kontakt</a>
+        <router-link v-if="!isHomePage" to="/" class="nav-link" @click="closeMenu">Startseite</router-link>
+        <router-link v-if="!isUeberMichPage" to="/ueber-mich" class="nav-link" @click="closeMenu">Über Mich</router-link>
+        <router-link v-if="!isWebProjektePage" to="/web-projekte" class="nav-link" @click="closeMenu">Web-Projekte</router-link>
+        <router-link v-if="!isDreiDProjektePage" to="/3d-projekte" class="nav-link" @click="closeMenu">3D-Projekte</router-link>
+        <a v-if="!isKontaktPage" href="/#kontakt" class="nav-link" @click="closeMenu">Kontakt</a>
       </div>
     </nav>
 
@@ -34,6 +34,23 @@ export default {
     return {
       menuOpen: false,
     }
+  },
+  computed: {
+    isHomePage() {
+      return this.$route.path === '/'
+    },
+    isUeberMichPage() {
+      return this.$route.path === '/ueber-mich'
+    },
+    isWebProjektePage() {
+      return this.$route.path === '/web-projekte'
+    },
+    isDreiDProjektePage() {
+      return this.$route.path === '/3d-projekte'
+    },
+    isKontaktPage() {
+      return this.$route.path === '/kontakt'
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.closeMenu)
