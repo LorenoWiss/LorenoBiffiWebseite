@@ -92,20 +92,18 @@ export default {
         },
         {
           id: 2,
-          title: 'xxxxxxxxxx xxxxxxx',
-          date: 'xxxx xxxx - xxxxxxx',
-          description:
-            'xxxx xxxxxxxxx xxxxxxx xxx xxxxxxxxx, xxxxxxxxxxxxxxxxx xxx xxxxxxxxxxxxxxxxxxxx. xxxxxxx xxx xxxxxxx xxx xxxxxxxx xxx xxxxx.',
-          tags: ['xxxxx', 'xxxxxxx', 'xxxxxxx', 'xxxxxxx', 'xxxxx xxx'],
+          title: 'xxx xxx',
+          date: 'xx.xx.xxxx - xxxxxxx',
+          description: 'xxx xxx xxx xxx xxx xxx xxx xxx xxx',
+          tags: ['xxx', 'xxx', 'xxx', 'xxx'],
           status: 'planned',
         },
         {
           id: 3,
-          title: 'xxxx xxxxxxxxxx xxx',
-          date: 'xxx xxxx - xx xxxxxxxxxx',
-          description:
-            'xxxx xxxxxxxxxx xxxxxxxxxxxxxxxxxxxx xxx xxxxxxxx-xxxxxxx, xxxx & xxxx xxxxxxxxx xxx xxxx-xxxxxxxxxxxxxxxxxxxxxx.',
-          tags: ['xxx x', 'xxxxxxxx', 'xxxxxxxxxx', 'xxxxxxxx xxx'],
+          title: 'xxx xxx',
+          date: 'xx.xx.xxxx - xxxxxxx',
+          description: 'xxx xxx xxx xxx xxx xxx xxx xxx xxx',
+          tags: ['xxx', 'xxx', 'xxx', 'xxx'],
           status: 'planned',
         },
       ],
