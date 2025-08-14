@@ -3,66 +3,85 @@
     <h2>Kontakt</h2>
     <p>Loreno.f.Biffi@gmail.com</p>
     <p>Zürich, Schweiz</p>
-    
-    <form 
-      action="https://formspree.io/f/xvgqwrga" 
-      method="POST" 
+
+    <form
+      action="https://formspree.io/f/xvgqwrga"
+      method="POST"
       class="contact-form"
       @submit="handleSubmit"
       novalidate
     >
       <div class="form-group">
         <label for="name">Name *</label>
-        <input type="text" id="name" name="name" v-model="form.name"
-               :class="{ 'error': errors.name }">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          v-model="form.name"
+          :class="{ error: errors.name }"
+        />
         <span v-if="errors.name" class="error-text">{{ errors.name }}</span>
       </div>
-      
+
       <div class="form-group">
         <label for="email">E-Mail *</label>
-        <input type="email" id="email" name="email" v-model="form.email"
-               :class="{ 'error': errors.email }">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          v-model="form.email"
+          :class="{ error: errors.email }"
+        />
         <span v-if="errors.email" class="error-text">{{ errors.email }}</span>
       </div>
-      
+
       <div class="form-group">
         <label for="company">Unternehmen</label>
-        <input type="text" id="company" name="company" v-model="form.company">
+        <input type="text" id="company" name="company" v-model="form.company" />
       </div>
-      
+
       <div class="form-group">
-        <label for="message">Nachricht *</label>
-        <textarea id="message" name="message" v-model="form.message"
-                  placeholder="Beschreiben Sie kurz Ihr Praktikumsangebot oder Ihre Anfrage..."
-                  :class="{ 'error': errors.message }"></textarea>
+        <label for="message">Nachricht</label>
+        <textarea
+          id="message"
+          name="message"
+          v-model="form.message"
+          placeholder="... "
+          :class="{ error: errors.message }"
+        ></textarea>
         <span v-if="errors.message" class="error-text">{{ errors.message }}</span>
       </div>
-      
+
       <button type="submit" :disabled="isSubmitting">
         {{ isSubmitting ? 'Wird gesendet...' : 'Nachricht senden' }}
       </button>
     </form>
-    
+
     <div v-if="submitStatus === 'success'" class="success-message">
       Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
     </div>
-    
+
     <div v-if="submitStatus === 'error'" class="error-message">
-      Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an Loreno.f.Biffi@gmail.com
+      Fehler beim Senden. Bitte versuchen Sie es erneut oder schreiben Sie direkt an
+      Loreno.f.Biffi@gmail.com
     </div>
-    
+
     <div class="formspree-attribution">
       <a href="https://formspree.io" target="_blank" class="formspree-link">
-        <img src="@/assets/formspree-logo-no-text.svg" alt="Formspree" class="formspree-logo">
+        <img src="@/assets/formspree-logo-no-text.svg" alt="Formspree" class="formspree-logo" />
         Powered by Formspree
       </a>
     </div>
-    
+
     <div class="social-links">
       <a href="https://github.com/LorenoWiss" target="_blank" class="social-link">
         <font-awesome-icon :icon="['fab', 'github']" /> GitHub
       </a>
-      <a href="https://www.linkedin.com/in/loreno-biffi-261658377/" target="_blank" class="social-link">
+      <a
+        href="https://www.linkedin.com/in/loreno-biffi-261658377/"
+        target="_blank"
+        class="social-link"
+      >
         <font-awesome-icon :icon="['fab', 'linkedin']" /> LinkedIn
       </a>
     </div>
@@ -97,48 +116,42 @@ export default {
   methods: {
     validateForm() {
       this.errors = {}
-      
+
       if (!this.form.name.trim()) {
         this.errors.name = 'Bitte geben Sie Ihren Namen ein'
       }
-      
+
       if (!this.form.email.trim()) {
         this.errors.email = 'Bitte geben Sie Ihre E-Mail-Adresse ein'
       } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) {
         this.errors.email = 'Bitte geben Sie eine gültige E-Mail-Adresse ein'
       }
-      
-      if (!this.form.message.trim()) {
-        this.errors.message = 'Bitte geben Sie eine Nachricht ein'
-      } else if (this.form.message.trim().length < 10) {
-        this.errors.message = 'Die Nachricht muss mindestens 10 Zeichen lang sein'
-      }
-      
+
       return Object.keys(this.errors).length === 0
     },
-    
+
     async handleSubmit(event) {
       event.preventDefault()
-      
+
       if (this.isSubmitting) return
-      
+
       if (!this.validateForm()) {
         return
       }
-      
+
       this.isSubmitting = true
       this.submitStatus = null
-      
+
       try {
         const formData = new FormData(event.target)
         const response = await fetch(event.target.action, {
           method: 'POST',
           body: formData,
           headers: {
-            'Accept': 'application/json'
-          }
+            Accept: 'application/json',
+          },
         })
-        
+
         if (response.ok) {
           this.submitStatus = 'success'
           this.form = { name: '', email: '', company: '', message: '' }

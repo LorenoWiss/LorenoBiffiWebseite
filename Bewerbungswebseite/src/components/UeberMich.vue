@@ -72,7 +72,7 @@
         <section class="cta-card">
           <h2 class="cv-title">Praktikumssuche</h2>
           <p>
-            Ich suche aktuell nach einem passenden Praktikum, um meine Ausbildung abzuschließen und
+            Ich suche nach einem passenden Praktikum, um meine Ausbildung abzuschließen und
             praktische Erfahrung in einem professionellen Umfeld zu sammeln.
           </p>
           <router-link to="/#kontakt" class="cta-button">Kontakt aufnehmen</router-link>
