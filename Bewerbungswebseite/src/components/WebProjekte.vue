@@ -84,7 +84,7 @@ export default {
           title: 'Loreno.ch',
           date: 'Juni 2025 - laufend',
           description:
-            'Die Portfolio-Website, auf der Sie sich gerade befinden, habe ich als Einblick in meine Fähigkeiten in der Webentwicklung gemacht. SSie zeigt meine Fähigkeiten in der Frontend-Entwicklung.',
+            'Die Portfolio-Website, auf der Sie sich gerade befinden, habe ich als Einblick in meine Fähigkeiten in der Webentwicklung gemacht. Sie zeigt meine Fähigkeiten in der Frontend-Entwicklung.',
           tags: ['Vue 3', 'Vite'],
           status: 'available',
           link: 'https://loreno.ch',
