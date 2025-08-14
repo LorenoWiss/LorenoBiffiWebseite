@@ -119,25 +119,14 @@ export default {
 }
 </script>
 <style scoped>
+/* Base Styles */
 .projekt-section {
   padding: 2rem 5%;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.back-button {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  text-decoration: none;
-  color: #68904d;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.back-button:hover {
-  color: #14471e;
-}
-
+/* Typography */
 .page-title {
   font-size: 2rem;
   color: #14471e;
@@ -152,24 +141,53 @@ export default {
   line-height: 1.6;
 }
 
-.info-text a,
-.info-text .router-link {
-  color: #68904d;
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.3s;
+.footer-text {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
 }
 
-.info-text a:hover,
-.info-text .router-link:hover {
+/* Links */
+.back-button {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #68904d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-button:hover {
   color: #14471e;
 }
 
+.social-link {
+  color: #68904d;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.social-link:hover {
+  color: #14471e;
+}
+
+.footer-text a {
+  color: #68904d;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.footer-text a:hover {
+  color: #14471e;
+}
+
+/* Projects Grid */
 .projects-grid {
   display: grid;
   gap: 2rem;
   margin: 3rem 0;
-  max-width: 1200px;
 }
 
 .project-card {
@@ -180,9 +198,7 @@ export default {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
@@ -190,9 +206,11 @@ export default {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* Project Image */
 .project-image {
   position: relative;
   min-height: 200px;
+  display: flex;
 }
 
 .project-logo {
@@ -202,21 +220,13 @@ export default {
   border-radius: 8px;
 }
 
-.project-thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px 0 0 8px;
-}
-
 .placeholder-image {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, #68904d, #14471e);
   display: flex;
   align-items: center;
-  justify-self: center;
-  position: relative;
+  justify-content: center;
 }
 
 .placeholder-text {
@@ -224,14 +234,13 @@ export default {
   font-weight: 600;
   font-size: 1.1rem;
   text-align: center;
-  opacity: 0.9;
 }
 
+/* Project Content */
 .project-content {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .project-header {
@@ -260,9 +269,9 @@ export default {
   color: #555;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  flex-grow: 1;
 }
 
+/* Tags */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -280,6 +289,7 @@ export default {
   border: 1px solid rgba(104, 144, 77, 0.3);
 }
 
+/* Buttons */
 .project-button {
   background: #68904d;
   color: white;
@@ -289,10 +299,12 @@ export default {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  align-self: flex-start;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
-.project-button:hover:not(:disabled) {
+.project-button:hover {
   background: #14471e;
   transform: translateX(5px);
 }
@@ -303,34 +315,7 @@ export default {
   transform: none;
 }
 
-.project-link {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.footer-text {
-  font-size: 1rem;
-  color: #666;
-  text-align: center;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #e0e0e0;
-}
-
-.footer-text a,
-.footer-text .router-link {
-  color: #68904d;
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.footer-text a:hover,
-.footer-text .router-link:hover {
-  color: #14471e;
-}
-
-/* Mobile Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .projekt-section {
     padding: 1rem;
@@ -346,16 +331,11 @@ export default {
 
   .project-header {
     flex-direction: column;
-    align-items: flex-start;
   }
 
   .project-date {
     margin-left: 0;
     margin-top: 0.5rem;
-  }
-
-  .project-tags {
-    gap: 0.3rem;
   }
 
   .tag {
