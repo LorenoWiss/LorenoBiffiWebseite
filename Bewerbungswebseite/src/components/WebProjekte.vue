@@ -6,15 +6,37 @@
       <p class="info-text">Hier sind einige meiner aktuellen und geplanten Web-Projekte:</p>
 
       <div class="projects-grid">
-        <div v-for="project in projects" :key="project.id" class="project-card">
+        <!-- Erstes Projekt ist einzeln gerendert, um die message darunter richtig darzustellen, aber das ändere ich sobald ich mehr projekte habe -->
+        <div class="project-card">
           <div class="project-image">
-            <img
-              v-if="project.image"
-              :src="project.image"
-              :alt="project.title"
-              class="project-logo"
-            />
-            <div v-else class="placeholder-image">
+            <img :src="projects[0].image" :alt="projects[0].title" class="project-logo" />
+          </div>
+          <div class="project-content">
+            <div class="project-header">
+              <h3 class="project-title">{{ projects[0].title }}</h3>
+              <span class="project-date">{{ projects[0].date }}</span>
+            </div>
+            <p class="project-description">{{ projects[0].description }}</p>
+            <div class="project-tags">
+              <span v-for="tag in projects[0].tags" :key="tag" class="tag">{{ tag }}</span>
+            </div>
+            <a :href="projects[0].link" target="_blank" class="project-button project-link">
+              Details ansehen →
+            </a>
+          </div>
+        </div>
+
+        <h3 class="info-text">
+          Die folgenden Projekte sind noch in Planung oder in frühen Entwicklungsphasen. Sie finden
+          den Fortschritt auf
+          <a href="https://github.com/LorenoWiss" target="_blank" class="social-link"> GitHub </a>
+          ...
+        </h3>
+
+        <!-- Weitere Projekte (XXX-Platzhalter) -->
+        <div v-for="project in projects.slice(1)" :key="project.id" class="project-card">
+          <div class="project-image">
+            <div class="placeholder-image">
               <span class="placeholder-text">{{ project.title }}</span>
             </div>
           </div>
@@ -27,17 +49,8 @@
             <div class="project-tags">
               <span v-for="tag in project.tags" :key="tag" class="tag">{{ tag }}</span>
             </div>
-            <a
-              v-if="project.status === 'available' && project.link"
-              :href="project.link"
-              target="_blank"
-              class="project-button project-link"
-            >
-              Details ansehen →
-            </a>
-            <button v-else class="project-button" :disabled="true">
-              <span v-if="project.status === 'in-progress'">In Entwicklung</span>
-              <span v-else>Geplant</span>
+            <button class="project-button" :disabled="true">
+              <span>Geplant</span>
             </button>
           </div>
         </div>
@@ -53,7 +66,7 @@
 </template>
 
 <script>
-import portfolioLogo from '@/assets/logo.svg'
+import portfolioLogo from '@/assets/logo.png'
 
 export default {
   name: 'WebProjekte',
@@ -71,8 +84,8 @@ export default {
           title: 'Loreno.ch',
           date: 'Juni 2025 - laufend',
           description:
-            'Diese responsive Portfolio-Website habe ich mit Vue 3, Vite und weiteren Tools entwickelt. Sie zeigt meine Fähigkeiten in der Frontend-Entwicklung.',
-          tags: ['Vue 3', 'Vite', 'CSS', 'JavaScript'],
+            'Die Portfolio-Website, auf der Sie sich gerade befinden, habe ich als Einblick in meine Fähigkeiten in der Webentwicklung gemacht. SSie zeigt meine Fähigkeiten in der Frontend-Entwicklung.',
+          tags: ['Vue 3', 'Vite'],
           status: 'available',
           link: 'https://loreno.ch',
           image: portfolioLogo,
@@ -105,7 +118,6 @@ export default {
   },
 }
 </script>
-
 <style scoped>
 .projekt-section {
   padding: 2rem 5%;
@@ -183,6 +195,13 @@ export default {
   min-height: 200px;
 }
 
+.project-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 .project-thumbnail {
   width: 100%;
   height: 100%;
@@ -196,7 +215,7 @@ export default {
   background: linear-gradient(135deg, #68904d, #14471e);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-self: center;
   position: relative;
 }
 
