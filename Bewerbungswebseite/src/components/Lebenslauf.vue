@@ -5,7 +5,6 @@
         <h1>Loreno Biffi</h1>
         <div class="cv-contact">
           <a href="mailto:loreno.f.biffi@gmail.com">loreno.f.biffi@gmail.com</a> <br />
-          Rudenweg 1, 8084 Zürich <br />
           1. März 2008
         </div>
       </div>
