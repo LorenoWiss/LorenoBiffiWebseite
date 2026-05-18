@@ -48,7 +48,7 @@
     <div class="cv-section">
       <h2>Hobbies und Interessen</h2>
       <ul>
-        <li>Pfadi Leiter (Wolfstufe Pfadi Rudolf Brun)</li>
+        <li>Pfadi Leiter</li>
         <li>3D-Gestaltung in Blender</li>
         <li>Gaming</li>
         <li>Musik machen</li>
