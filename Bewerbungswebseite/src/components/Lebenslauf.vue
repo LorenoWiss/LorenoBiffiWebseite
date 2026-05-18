@@ -19,40 +19,7 @@
       </div>
     </div>
 
-    <div class="cv-section cv-profile">
-      <h2>Kompetenz-Profil</h2>
-      <p>
-        In der schulischen Berufsausbildung sammle ich Kenntnisse im Projektmanagement mit agilen
-        Methoden, im Programmieren (Java, HTML, JavaScript), im Datenbankmanagement (MySQL, MongoDB)
-        sowie im Web- und UI/UX-Design. Diese technischen Kompetenzen bilden eine gute Grundlage für
-        eine erfolgreiche Projektabwicklung in vielen Bereichen der Informatik.<br />
-        Als angehender Applikationsentwickler schätze ich ein funktionierendes Team, in dem
-        Zusammenarbeit und Zuverlässigkeit zentral sind. Ich bin ein positiv eingestellter
-        Teamplayer mit guten Kommunikationsfähigkeiten, hilfsbereit und motiviert, stetig
-        dazuzulernen. Ich bin überzeugt, durch diese Eigenschaften einen positiven Einfluss auf die
-        Teamatmosphäre zu haben.
-      </p>
-    </div>
 
-    <div class="cv-section">
-      <h2>Ausbildung</h2>
-      <ul>
-        <li>
-          <strong>Informatiker Applikationsentwicklung</strong>, WISS, Hohlstrasse 535, 8048
-          Zürich<br /><span>Aug. 2023 – laufend</span>
-        </li>
-        <li>
-          <strong>Sekundarstufe A</strong>, Albisriederplatz, Norastrasse 20, 8004 Zürich<br /><span
-            >Aug. 2020 – Juni 2023</span
-          >
-        </li>
-        <li>
-          <strong>Primarstufe</strong>, Kappeli, Badenerstrasse 618, 8048 Zürich<br /><span
-            >Aug. 2014 – Juni 2020</span
-          >
-        </li>
-      </ul>
-    </div>
 
     <div class="cv-section">
       <h2>Sprachkenntnisse</h2>
@@ -94,14 +61,9 @@
       <h2>Erfolge</h2>
       <ul>
         <li>
-          <strong>Pfadi:</strong> Basiskurs Ausbildungslager (April 25), Meuteleiter Wolfstufe Pfadi
-          Rudolf Brun
+          <strong>IT & Engagement:</strong> ICT-Scouts, Kits für Kids Programm
         </li>
-        <li>
-          <strong>IT & Engagement:</strong> ICT-Scouts (Zertifikat unten), Kits für Kids Programm
-          (Erster der Schule, Zertifikat unten)
-        </li>
-        <li><strong>Sonstiges:</strong>Nothelferkurs (Februar 25)</li>
+        <li><strong>Sonstiges:</strong>Nothelferkurs</li>
       </ul>
     </div>
 
