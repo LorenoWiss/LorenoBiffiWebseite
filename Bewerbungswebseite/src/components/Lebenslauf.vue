@@ -26,7 +26,7 @@
       <ul>
         <li><strong>Deutsch</strong> – Muttersprache</li>
         <li><strong>Italienisch</strong> – Zweitsprache</li>
-        <li><strong>Englisch</strong> – Cambridge-Exam mit C1 Absolviert (Zertifikat unten)</li>
+        <li><strong>Englisch</strong> – Cambridge-Exam C1</li>
         <li><strong>Französisch</strong> – Sek A Kenntnisse</li>
       </ul>
     </div>
